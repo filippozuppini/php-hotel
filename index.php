@@ -122,15 +122,15 @@
           <?php 
             foreach ($hotels as $hotel) {
             echo "<tr>
-                    <td>$hotel[name]</td>;
+                    <td>$hotel[name]</td>
 
-                    <td>$hotel[description]</td>;
+                    <td>$hotel[description]</td>
 
-                    <td> $hotel['parking'] === true ? " Si" : " No" </td>;
+                    <td> ". ( $hotel['parking'] === true ? " Si" : " No") . " </td>
 
-                    <td>$hotel[vote]</td>;
+                    <td>$hotel[vote]</td>
 
-                    <td>$hotel[distance_to_center]</td>;
+                    <td>$hotel[distance_to_center]</td>
                 </tr>";
 
 
