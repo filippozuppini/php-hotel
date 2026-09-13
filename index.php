@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>php hotel</title>
 </head>
+
+
 <body>
 
-<h1>Ex Hotel</h1>
+<h1>Esercizio Php Hotel</h1>
 
     <?php
 
@@ -86,23 +89,64 @@
 
 
 
-        foreach ($hotels as $hotel) {
-            echo "<b>Nome:</b> $hotel[name] <br> ";
-            echo "<b>Descirzione:</b> $hotel[description] <br> ";
+        // foreach ($hotels as $hotel) {
+        //     echo "<b>Nome:</b> $hotel[name] <br> ";
+        //     echo "<b>Descirzione:</b> $hotel[description] <br> ";
 
 
-            echo '<b>Parcheggio privato:</b>' . ($hotel['parking'] === true ? " Si" : " No"). ' <br> ';
+        //     echo '<b>Parcheggio privato:</b>' . ($hotel['parking'] === true ? " Si" : " No"). ' <br> ';
 
 
-            echo "<b>Voto:</b> $hotel[vote] stelle <br> ";
-            echo "<b>Distanza dal centro:</b> $hotel[distance_to_center] km <br> ";
+        //     echo "<b>Voto:</b> $hotel[vote] stelle <br> ";
+        //     echo "<b>Distanza dal centro:</b> $hotel[distance_to_center] km <br> ";
 
-            echo "<br>" ;
-        }
+        //     echo "<br>" ;
+        // }
+
+
 
     ?>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Nome</th>
+              <th scope="col">Descirzione</th>
+              <th scope="col">Parcheggio privato</th>
+              <th scope="col">Voto</th>
+              <th scope="col">Distanza dal centro</th>
+            </tr>
+          </thead>
+          <tbody>
 
 
+          <?php 
+            foreach ($hotels as $hotel) {
+            echo "<tr>
+                    <td>$hotel[name]</td>;
+
+                    <td>$hotel[description]</td>;
+
+                    <td> $hotel['parking'] === true ? " Si" : " No" </td>;
+
+                    <td>$hotel[vote]</td>;
+
+                    <td>$hotel[distance_to_center]</td>;
+                </tr>";
+
+
+            }
+          
+          ?>
+            
+          </tbody>
+        </table>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     
 </body>
 </html>
