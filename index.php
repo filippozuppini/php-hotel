@@ -87,7 +87,17 @@
 
 
         foreach ($hotels as $hotel) {
-            echo "Nome: $hotel[name] <br> ";
+            echo "<b>Nome:</b> $hotel[name] <br> ";
+            echo "<b>Descirzione:</b> $hotel[description] <br> ";
+
+
+            echo '<b>Parcheggio privato:</b>' . ($hotel['parking'] === true ? " Si" : " No"). ' <br> ';
+
+
+            echo "<b>Voto:</b> $hotel[vote] stelle <br> ";
+            echo "<b>Distanza dal centro:</b> $hotel[distance_to_center] km <br> ";
+
+            echo "<br>" ;
         }
 
     ?>
