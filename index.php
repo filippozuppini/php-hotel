@@ -130,7 +130,7 @@
 
                     <td>$hotel[vote]</td>
 
-                    <td>$hotel[distance_to_center]</td>
+                    <td>$hotel[distance_to_center] Km</td>
                 </tr>";
 
 
